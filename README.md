@@ -2,6 +2,12 @@
 
 > Preview for vue-sweetalert-icons
 
+Remember to add an [`npm link`](https://docs.npmjs.com/cli/link) to vue-sweetalert-icons.
+
+```bash
+npm link vue-sweetalert-icons
+```
+
 ## Build Setup
 
 ``` bash
