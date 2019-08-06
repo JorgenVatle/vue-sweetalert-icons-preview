@@ -4,7 +4,20 @@
         <!-- Heading -->
         <header class="flex justify-between flex-col sm:flex-row">
             <!-- Title -->
-            <h1 class="text-3xl">Vue-Sweetalert-Icons</h1>
+            <div>
+                <h1 class="text-3xl leading-tight">Vue-Sweetalert-Icons</h1>
+                <div class="leading-tight text-gray-500 text-sm">
+                    <span>
+                        <label>License</label>
+                        <a href="https://github.com/JorgenVatle/vue-sweetalert-icons/blob/master/LICENSE" target="_blank" class="font-medium">ISC</a>
+                    </span>
+                    <span>|</span>
+                    <span>
+                        <label>Package</label>
+                        <a href="https://www.npmjs.com/package/vue-sweetalert-icons" target="_blank">vue-sweetalert-icons</a>
+                    </span>
+                </div>
+            </div>
 
             <!-- GitHub & Author -->
             <nav class="text-gray-500 text-left sm:text-right">
@@ -12,12 +25,6 @@
                    href="https://github.com/JorgenVatle/vue-sweetalert-icons">
                     View on GitHub 🐱‍💻
                 </a>
-                <p class="leading-tight">
-                    <small>
-                        <label>Author</label>
-                        <a href="https://github.com/JorgenVatle" target="_blank" class="font-medium">Jørgen Vatle</a>
-                    </small>
-                </p>
             </nav>
         </header>
 
