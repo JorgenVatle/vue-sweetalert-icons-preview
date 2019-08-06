@@ -1,4 +1,4 @@
 import Vue from 'vue';
-import VueSweetalertIcons from '../../src/entry';
+import VueSweetalertIcons from 'vue-sweetalert-icons';
 
 Vue.use(VueSweetalertIcons);
