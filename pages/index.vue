@@ -2,12 +2,12 @@
     <div class="container py-8">
 
         <!-- Heading -->
-        <header class="flex justify-between">
+        <header class="flex justify-between flex-col sm:flex-row">
             <!-- Title -->
             <h1 class="text-3xl">Vue-Sweetalert-Icons</h1>
 
             <!-- GitHub & Author -->
-            <nav class="text-gray-500 text-right">
+            <nav class="text-gray-500 text-left sm:text-right">
                 <a class="font-medium text-gray-500 leading-tight"
                    href="https://github.com/JorgenVatle/vue-sweetalert-icons">
                     View on GitHub 🐱‍💻
