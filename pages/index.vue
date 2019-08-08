@@ -70,30 +70,7 @@
     export default {
         data() {
             return {
-                icons: [
-                    {
-                        name: 'success',
-                        display: true,
-                        canReplay: true,
-                    },
-                    {
-                        name: 'warning',
-                        display: true,
-                    },
-                    {
-                        name: 'error',
-                        display: true,
-                        canReplay: true,
-                    },
-                    {
-                        name: 'info',
-                        display: true,
-                    },
-                    {
-                        name: 'loading',
-                        display: true,
-                    },
-                ],
+                icons: require('../assets/json/icons'),
             }
         },
 

@@ -1,0 +1,24 @@
+[
+    {
+        "name": "success",
+        "display": true,
+        "canReplay": true
+    },
+    {
+        "name": "warning",
+        "display": true
+    },
+    {
+        "name": "error",
+        "display": true,
+        "canReplay": true
+    },
+    {
+        "name": "info",
+        "display": true
+    },
+    {
+        "name": "loading",
+        "display": true
+    }
+]
