@@ -30,15 +30,25 @@
 
         <!-- Icon Grid -->
         <div id="icons" class="grid md:grid-columns-3 py-4 md:py-8 md:grid-gap-4">
-            <div v-for="(icon, index) in $options.icons" class="py-4 md:py-0">
+            <div v-for="(icon, index) in icons" class="py-4 md:py-0">
                 <no-ssr>
-                    <sweetalert-icon :icon="icon.name" :key="icon + index" class="mb-2" />
+                    <sweetalert-icon class="mb-2"
+                                     :icon="icon.name"
+                                     :key="icon + index"
+                                     v-if="icon.display" />
+                    <div v-else style="height: 140px;"></div>
                 </no-ssr>
                 <div class="text-center">
                     <div>
                         <label class="text-xl capitalize" v-text="icon.name"></label>
                     </div>
                     <code class="text-gray-600">&lt;sweetalert-icon icon="{{icon.name}}" /&gt;</code>
+                    <div class="mt-2">
+                        <a href="#" v-if="icon.canReplay" @click.prevent="replay(icon)"
+                           class="text-sm bg-gray-200 px-2 rounded hover:bg-gray-300">
+                            replay
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,22 +68,42 @@
 
 <script>
     export default {
-        icons: [
-            {
-                name: 'success',
+        data() {
+            return {
+                icons: [
+                    {
+                        name: 'success',
+                        display: true,
+                        canReplay: true,
+                    },
+                    {
+                        name: 'warning',
+                        display: true,
+                    },
+                    {
+                        name: 'error',
+                        display: true,
+                        canReplay: true,
+                    },
+                    {
+                        name: 'info',
+                        display: true,
+                    },
+                    {
+                        name: 'loading',
+                        display: true,
+                    },
+                ],
+            }
+        },
+
+        methods: {
+            replay(icon) {
+                icon.display = false;
+                setTimeout(() => {
+                    icon.display = true;
+                });
             },
-            {
-                name: 'warning',
-            },
-            {
-                name: 'error',
-            },
-            {
-                name: 'info',
-            },
-            {
-                name: 'loading',
-            },
-        ],
+        }
     };
 </script>
