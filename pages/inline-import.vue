@@ -14,8 +14,8 @@
                 </div>
 
                 <!-- Code Preview -->
-                <pre class="text-xs bg-gray-900 text-gray-100 rounded-r p-4 inline-block">
-&lt;template&gt;
+                <no-ssr>
+                <code-highlight class="text-xs rounded-r inline-block">&lt;template&gt;
     &lt;sweetalert-icon icon="{{ icon.name }}" /&gt;
 &lt;/template&gt;
 
@@ -25,7 +25,7 @@
     export default {
         components: { SweetalertIcon },
     }
-&lt;/script&gt;</pre>
+&lt;/script&gt;</code-highlight></no-ssr>
             </div>
         </div>
 
@@ -33,11 +33,25 @@
     </div>
 </template>
 
+<style lang="scss">
+    pre[class*="language-"] {
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+    }
+
+    pre[class*="language-"] {
+        @apply p-4 rounded-r;
+    }
+</style>
+
 <script>
     import { SweetalertIcon as Icon } from 'vue-sweetalert-icons';
+    import { component as CodeHighlight } from 'vue-code-highlight';
+    import 'vue-code-highlight/themes/duotone-sea.css';
 
     export default {
-        components: { Icon },
+        components: { Icon, CodeHighlight },
         data() {
             return {
                 icons: require('../assets/json/icons'),
