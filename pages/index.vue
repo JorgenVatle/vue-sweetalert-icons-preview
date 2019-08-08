@@ -29,8 +29,8 @@
         </header>
 
         <!-- Icon Grid -->
-        <div id="icons" class="grid md:grid-columns-3 py-4 md:py-8 md:grid-gap-4">
-            <div v-for="(icon, index) in icons" class="py-4 md:py-0">
+        <div id="icons" class="grid md:grid-columns-2 py-4 md:py-8 md:grid-gap-4">
+            <div v-for="(icon, index) in icons" class="py-4 my-4 md:py-0">
                 <no-ssr>
                     <sweetalert-icon class="mb-2"
                                      :icon="icon.name"
