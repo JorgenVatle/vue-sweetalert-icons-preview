@@ -45,9 +45,14 @@
     </div>
 </template>
 
-<style>
+<style lang="scss">
     #icons {
+        // Some animations require an overlay colour for parts of the animation.
+        // If possible, add an animation background explicitly; this will enable a slightly nicer looking animation.
         --sweetalert-icons-animation-background: theme('colors.gray.100');
+
+        // With defined animation background: https://gyazo.com/5236c4ecd2e2da4bde6457ef997167bd
+        // Without a defined animation background: https://gyazo.com/e5044c1606e8ca46c6f1a8f3b1f187f4
     }
 </style>
 
