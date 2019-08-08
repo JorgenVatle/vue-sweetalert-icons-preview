@@ -29,10 +29,10 @@
         </header>
 
         <!-- Icon Grid -->
-        <div class="grid md:grid-columns-3 py-4 md:py-8 md:grid-gap-4">
+        <div id="icons" class="grid md:grid-columns-3 py-4 md:py-8 md:grid-gap-4">
             <div v-for="(icon, index) in $options.icons" class="py-4 md:py-0">
                 <no-ssr>
-                    <sweetalert-icon :icon="icon.name" :key="icon + index" class="mb-2"/>
+                    <sweetalert-icon :icon="icon.name" :key="icon + index" class="mb-2" />
                 </no-ssr>
                 <div class="text-center">
                     <div>
@@ -44,6 +44,12 @@
         </div>
     </div>
 </template>
+
+<style>
+    #icons {
+        --sweetalert-icons-animation-background: theme('colors.gray.100');
+    }
+</style>
 
 <script>
     export default {
